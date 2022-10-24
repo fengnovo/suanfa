@@ -1,28 +1,27 @@
-// function selectSort(arr) {
-//     if (!arr.length) return arr;
-//     let len = arr.length;
-//     // 选择
-//     for(let i = 0; i < len; i++) {
-//     	// 把当前元素和它之后的元素做比较，如果大于后面一个就讲后面一个移到前面
-//         for(let j = i + 1; j < len; j++) {
-//             if (arr[i] > arr[j]) {
-//                 const temp = arr[i];
-//                 arr[i] = arr[j];
-//                 arr[j] = temp;
-//             }
-//         }
-//     }
-//     return arr;
-// }
+// 最简单的就是选择排序
+function selectSort(arr) {
+    if (!arr.length) return arr;
+    let len = arr.length;
+    // 选择
+    for (let i = 0; i < len; i++) {
+        // 把当前元素和它之后的元素做比较，如果大于后面一个就讲后面一个移到前面
+        // 先把第一个和第二个比较，第一个如果大于第二个就对调位置，这样第一个就是小的，然后
+        // 第一个和第三个比较，如果第一个比第三个大就对调位置，这样第一个就是小的，...一直这样，知道第一轮
+        // 对比完第一个就是最小的
+        // 再第二轮，先把第二个和第三个比较，第二个如果大于第三个就对调位置，这样第二个就是小的，然后重复上面的...
+        // 到第n轮就排好了
+        for (let j = i + 1; j < len; j++) {
+            if (arr[i] > arr[j]) {
+                const temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
 
-// selectSort([44,52,12,623,33,1,4,53,2,23,0])
+console.log(selectSort([44, 52, 12, 623, 33, 1, 4, 53, 2, 23, 0]));
 // [0, 1, 2, 4, 12, 23, 33, 44, 52, 53, 623]
-
-
-// 分解
-
-function
-
-
 
 

@@ -79,5 +79,5 @@ var findKthLargest = function(nums, k) {
 
 
 // 给数组中的第4大元素返回该元素
-console.log(findKthLargest([3,2,3,1,2,4,5,5,6], 4)); // 4
-console.log(findKthLargest([3,2,15,5,4], 2)); // 5
+console.log(findKthLargest([3,2,3,1,5,4,5,5,6], 4)); // 5
+console.log(findKthLargest([3,8,15,5,4], 2)); // 5
