@@ -1,3 +1,16 @@
+/*
+O(n^2)
+选择排序
+插入排序
+冒泡排序
+O(n)
+计数排序
+O(nlogn)
+归并排序
+快速排序
+*/
+
+
 // function insertSort( arr ){
 // 	let len = arr.length;
 // 	for(let i=1;i<len; i++){

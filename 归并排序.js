@@ -1,20 +1,21 @@
-let arr = [8,4,5,7,1,3,6,2];
-function mergeSort( arr ){
-	if( arr.length < 2 ) return arr;
-	let mid = Math.floor( arr.length/2 );
-	let merge = function(leftArr, rightArr){
-		console.log( leftArr, rightArr ) ;
+let arr = [8, 4, 5, 7, 1, 3, 6, 2];
+// 选一个归到哪个数组
+function mergeSort(arr) {
+	if (arr.length < 2) return arr;
+	let mid = Math.floor(arr.length / 2);
+	let merge = function (leftArr, rightArr) {
+		console.log(leftArr, rightArr);
 		let resultArr = [];
-		while( leftArr.length && rightArr.length ){
-			resultArr.push( leftArr[0] <= rightArr[0] ? 
-				leftArr.shift() : rightArr.shift() )
+		while (leftArr.length && rightArr.length) {
+			resultArr.push(leftArr[0] <= rightArr[0] ?
+				leftArr.shift() : rightArr.shift())
 		}
 		return resultArr.concat(leftArr).concat(rightArr);
 	}
 	return merge(
-		mergeSort(arr.slice(0,mid)),
+		mergeSort(arr.slice(0, mid)),
 		mergeSort(arr.slice(mid))
 	);
-	
+
 }
-console.log( mergeSort(arr));
+console.log(mergeSort(arr));
