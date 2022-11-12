@@ -6,22 +6,23 @@ var deleteNode = function (node) {
 
 
 // 单向链表去重
-var deleteDuplicates = function(head) {
-	if( !head) return head;
+var deleteDuplicates = function (head) {
+	if (!head) return head;
 	let cur = head;
-	while( cur.next ) {
-		if( cur.val == cur.next.val ){
+	while (cur.next) {
+		if (cur.val == cur.next.val) {
 			cur.next = cur.next.next;
 		} else {
 			cur = cur.next;
 		}
 	}
-	
+
 	return head;
 }
 
 // 反转链表 206
-var reverseList = function(head) {
+var reverseList = function (head) {
+	// 类似双指针，前一个时头之前的，即null；后一个时curr
 	var prev = null;
 	var curr = head;
 	while (curr) { 	//从第一个开始

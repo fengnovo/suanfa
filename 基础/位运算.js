@@ -1,38 +1,38 @@
-// function print(num) {
-//     let str = '';
-//     for (let i = 31; i >= 0; i--) {
-//         let s = (num & (1 << i)) == 0 ? "O" : "1";
-//         str = str + s; // 从最左到最右
-//     }
-//     console.log(str);
-// }
-// // print(1);
+function print(num) {
+    let str = '';
+    for (let i = 31; i >= 0; i--) {
+        let s = (num & (1 << i)) == 0 ? "O" : "1";
+        str = str + s; // 从最左到最右
+    }
+    console.log(str);
+}
+// print(1);
 
-// // print(1 << 1); // 任何一个数左移一位是，这个数乘以2
-// // console.log(1 << 1)
-// // print(1 << 2);
-// // console.log(1 << 2)
-// // print(1 << 3);
-// // console.log(1 << 3)
-// // print(1 << 4);
-// // console.log(1 << 4)
+// print(1 << 1); // 任何一个数左移一位是，这个数乘以2
+// console.log(1 << 1)
+// print(1 << 2);
+// console.log(1 << 2)
+// print(1 << 3);
+// console.log(1 << 3)
+// print(1 << 4);
+// console.log(1 << 4)
 
-// // print(1234);
-// // console.log(1234 << 1)
-// // console.log(Number.MAX_SAFE_INTEGER / 10000 / 10000);
+// print(1234);
+// console.log(1234 << 1)
+// console.log(Number.MAX_SAFE_INTEGER / 10000 / 10000);
 
-// // 负数，是第一位为1，后面的取反加一
+// 负数，是第一位为1，后面的取反加一
 
-// const x1 = 123324;
-// const x2 = ~x1;
-// const x3 = x1 ^ 1;
-// const x4 = x1 ^ 2;
-// // console.log(x2); // | & ~ ^
-// // print(x1);
-// // print(x3);
-// // print(x4);
-// // console.log(x3);
-// // console.log(x4);
+const x1 = 123324;
+const x2 = ~x1;
+const x3 = x1 ^ 1;
+const x4 = x1 ^ 2;
+// console.log(x2); // | & ~ ^
+// print(x1);
+// print(x3);
+// print(x4);
+// console.log(x3);
+// console.log(x4);
 
 // console.log(Math.random());
 
